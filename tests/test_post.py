@@ -62,3 +62,4 @@ def test_delete(base_url):
     id = response.json()['id']
     delete = requests.delete(base_url + '/api/users/' + id)
     assert delete.status_code == 204
+    assert delete.text == ''
